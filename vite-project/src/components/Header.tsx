@@ -14,10 +14,15 @@ const Header: React.FC = () => {
                 <a className="mr-5 hover:text-gray-900 text-black cursor-pointer"></a>
                 
             </nav>
-            <a className="mr-5  hover:text-gray-900 text-black cursor-pointer">Log-in</a>
+            <a className="mr-5  hover:text-gray-950 text-black cursor-pointer">Log-in</a>
+            <button className="p-1 border border-black text-1xl rounded-md rounded-tr-none rounded-bl-none outline-none  hover:shadow-xl hover:rounded-none duration-200">
+                Sign up
+            </button>
+            {/* 
             <button className="inline-flex items-center bg-blue-500 border-0 py-2 px-5 focus:outline-none  rounded text-base text-white mt-4 hover:bg-opacity-80">
                 Sign up
             </button>
+            */}
         </div>
     </header>
   )
