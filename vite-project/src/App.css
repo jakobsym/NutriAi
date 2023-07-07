@@ -2,6 +2,7 @@ body {
     background-image:none;  /* Updating with gridstyle background */
     background-size: cover;
     background-position: center;
+    font-family: 'Playfair Display', serif;
 }
 
 #root {
