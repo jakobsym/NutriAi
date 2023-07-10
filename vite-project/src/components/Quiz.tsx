@@ -12,7 +12,6 @@ const Quiz: React.FC = () => {
     }
 
 
-
   return (
     <div>Quiz</div>
   )
