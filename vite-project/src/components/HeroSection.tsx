@@ -1,5 +1,6 @@
 import React from 'react'
 import StartButton from './StartButton'
+import { Link } from 'react-router-dom';
 
 const HeroSection: React.FC = () => {
   return (
@@ -10,10 +11,10 @@ const HeroSection: React.FC = () => {
               <h1 className="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-extrabold pl-12"> NutriAi</h1>
               <p className="mb-8 leading-relaxed opacity-50 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, sit ut fermentum posuere platea. Cras turpis adipiscing varius id sed leo morbi. Morbi amet, lectus pretium et vitae duis lectus in lorem. 
               </p>
-              <StartButton />
+              <Link to="/quiz"> <StartButton /></Link>
+              {/* <StartButton /> */}
           </div>
       
-
         <div id="pattern" className="w-32 sm:w-40 lg:max-w-xl lg:w-full md:w-32 xl:w-5/6 bg-contain bg-no-repeat md:ml-40 xl:mr-16">
               
           <div className="w-full flex gap-3 justify-center ">

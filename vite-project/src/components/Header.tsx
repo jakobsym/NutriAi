@@ -1,6 +1,6 @@
 import React from 'react'
-import About from './About'
 import Logo from './Logo'
+import AboutButton from './AboutButton'
 
 const Header: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
                 <a className='mr-5 text-black hover:text-gray-900 cursor-pointer "'></a>
                 <a className="mr-5 hover:text-gray-900 text-black cursor-pointer"></a>
             </nav>
-            <About />
+            <AboutButton />
         </div>
     </header>
   )
