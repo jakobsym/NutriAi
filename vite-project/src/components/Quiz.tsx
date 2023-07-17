@@ -10,6 +10,7 @@ const Quiz: React.FC = () => {
     const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);    // highlight selected answer
   
     const onClickNext = () => {
+        // USE .JOIN(", ") if possible to create csv
         if (selectedAnswerIndex !== null){
             const userChoice = choices[selectedAnswerIndex];
             //console.log("choice = %s", userChoice);
