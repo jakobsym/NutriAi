@@ -8,9 +8,8 @@ interface QuizBank {
     totalQuestion: number,
     questions: Question[],
 }
-
-const quiz: QuizBank = {
-    totalQuestion: 4,
+export  const quiz: QuizBank = {
+    totalQuestion: 3,
     questions: [
         {
             question: "What are you health and fitness goals?",
