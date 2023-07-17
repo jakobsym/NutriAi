@@ -1,7 +1,6 @@
-import React from 'react'
 import '../Quiz.css'
 
-/* Integrate API within this function */
+/* Integrate API within this function (index.js)*/
 const Result = (props: {userChoice: string[]}) => {
   return (
     <div className="result">
