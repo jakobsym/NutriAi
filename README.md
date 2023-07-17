@@ -1,2 +1,3 @@
-# NutriAI
-TBA
+# NutriAi
+-This is a prototype.
+README TBA
