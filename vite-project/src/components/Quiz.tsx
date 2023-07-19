@@ -58,12 +58,14 @@ const Quiz: React.FC = () => {
 
               <div>
                   <button onClick={onClickNext} disabled={selectedAnswerIndex === null}>
+                      {/* console.log("showResult = " + showResult)! */}
                       {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
                   </button>
               </div>
             </div>
           ) : (
             <>
+              {/* console.log("showResult = " + showResult)! */}
               <Result userChoice={userChoice} />
             </>
           )}

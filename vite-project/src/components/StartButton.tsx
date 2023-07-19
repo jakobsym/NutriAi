@@ -5,9 +5,14 @@ const StartButton: React.FC = () => {
 
   const handleClick = () => {
     setButtonClick(true);
-    console.log("Clicked: buttonClick = " + buttonClick);
+    //console.log("Clicked: buttonClick = " + buttonClick);
   }
-  
+  return (
+    <div className="flex flex-col justify-center items-center w-90 h-40">
+      <button onClick={handleClick} className="bg-gradient-to-b w-max mx-auto text-black font-semibold from-neutral-100 active:opacity-40 to-neutral-200 px-10 py-3 rounded-2xl shadow-black shadow-md border-b-4 hover border-neutral-200 hover:shadow-sm transition-all duration-500">Get started</button>
+    </div>
+  )
+  {/* 
   return (
     <div className="flex flex-col justify-center items-center w-90 h-40">
     <button
@@ -21,5 +26,6 @@ const StartButton: React.FC = () => {
     </button>
   </div>
   )
+  */}
 }
 export default StartButton
