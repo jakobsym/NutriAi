@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
-import Result from './Result'
-import '../Quiz.css'
-import { quiz } from '../pages/quiz_page/quizData'
+import React, {useState} from 'react';
+import Result from './Result';
+import '../styles/Quiz.css';
+import { quiz } from '../pages/quiz_page/quizData';
 
 const Quiz: React.FC = () => {
    

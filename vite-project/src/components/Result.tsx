@@ -1,4 +1,4 @@
-import '../Quiz.css'
+import '../styles/Quiz.css';
 import { useEffect, useState } from "react";
 import  generatePrompt from "../api/generate.js";
 

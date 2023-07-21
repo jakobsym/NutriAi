@@ -2,9 +2,9 @@ import { BrowserRouter,
   Route,
   Routes,} from 'react-router-dom';
   
-import './App.css'
-import LandingPage from './pages/LandingPage/LandingPage'
-import QuizPage from './pages/quiz_page/QuizPage'
+import '../src/styles/App.css';
+import LandingPage from './pages/LandingPage/LandingPage';
+import QuizPage from './pages/quiz_page/QuizPage';
 
 function App() {
   return (
