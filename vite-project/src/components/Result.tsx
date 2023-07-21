@@ -19,7 +19,7 @@ const Result = (props: {userChoice: string[]}) => {
     }, [dispResult]);
 
     const userInput :string = "Im a " + props.userChoice[0] + " that weighs about " + props.userChoice[1] + ". I want to " + 
-        props.userChoice[2] + " doing " + props.userChoice[3] + ". Return a response using only 5 bullet points that will help me acheive my goal:" ;
+        props.userChoice[2] + " doing " + props.userChoice[3] + ". Return a response using only 5 bullet points listed 1 through 5 that will help me acheive my goal:" ;
     
 
     async function displayResult() {
