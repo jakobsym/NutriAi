@@ -1,5 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vite';
+import dotenv from 'dotenv';
+import react from '@vitejs/plugin-react-swc';
+
+dotenv.config(); // load env vars from .env
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,4 +11,4 @@ export default defineConfig({
   server: {
     port:3000
   },
-})
+});
