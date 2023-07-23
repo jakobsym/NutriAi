@@ -1,6 +1,4 @@
-
 const AboutButton:React.FC = () => {
-
   return (
     <a href="#"className="group relative inline-block overflow-hidden rounded border border-neutral-100 bg-neutral-100  px-12 py-3 text-sm font-medium text-slate-800 focus:outline-none active:bg-green-400 active:opacity-95 active:text-black">
         <span className="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-black transition-all duration-200 group-hover:w-full"></span>
