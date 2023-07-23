@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Result from './Result';
 import '../styles/Quiz.css';
-import { quiz } from '../pages/quiz_page/quizData';
+import { quiz } from '../pages/quizPage/quizData';
 
 const Quiz: React.FC = () => {
    
