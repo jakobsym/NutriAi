@@ -3,8 +3,8 @@ import { BrowserRouter,
   Routes,} from 'react-router-dom';
   
 import '../src/styles/App.css';
-import LandingPage from './pages/LandingPage/LandingPage';
-import QuizPage from './pages/quiz_page/QuizPage';
+import LandingPage from './pages/landingPage/LandingPage';
+import QuizPage from './pages/quizPage/QuizPage';
 
 function App() {
   return (
