@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
     <section className='text-black'>
       <div className="container mx-auto flex px-5 py-5 md:flex-row flex-col items-center">
           <div className="lg:flex-grow flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-              <h2 className="title-font tracking-wide sm:text-2xl md:text-5xl xl:text-6xl mb-5 font-bold ">Meet</h2>
+              <h2 className="title-font tracking-wide sm:text-1xl md:text-4xl xl:text-5xl mb-5 font-bold ">Meet</h2>
               <h1 className="title-font tracking-wide sm:text-7xl md:text-8xl xl:text-9xl mb-4 font-extrabold pl-12"> NutriAi</h1>
               <p className="mb-8 leading-relaxed opacity-50 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus, sit ut fermentum posuere platea. Cras turpis adipiscing varius id sed leo morbi. Morbi amet, lectus pretium et vitae duis lectus in lorem. 
               </p>
