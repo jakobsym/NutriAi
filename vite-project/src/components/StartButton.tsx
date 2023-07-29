@@ -7,6 +7,7 @@ const StartButton: React.FC = () => {
           <path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
         </svg>
       </button>
+      {/* <div className="fixed h-screen w-full bg-gradient-to-br from-neutral-100 via-white to-teal-100"></div> */}
     </div>
   );
 }

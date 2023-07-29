@@ -31,20 +31,19 @@ const Quiz: React.FC = () => {
     }
 
     const addLeadingZero = (num: number) => (num > 9 ? num : `0${num}`)
-
     const { questions } = quiz;
-    // destructure questions objects
     const {question, choices} = questions[activeQuestion];  // fetch corresponding 'choices[]' for the 'question'
 
     return (
+      
         <div className='quiz-container max-w-500px min-w-250px rounded-md mt-100px p-30px 60px'>
           {!showResult ? (
               <div>
+
               <div>
-                  <span className='active-question-no text-purple-800'>{addLeadingZero(activeQuestion + 1)}</span>
+                  <span className='active-question-no text-blue-600'>{addLeadingZero(activeQuestion + 1)}</span>
                   <span className='total-question text-gray-400'>/{addLeadingZero(questions.length)}</span>
               </div>
-                
               <h2>{question}</h2>
               <ul>
                   {choices.map((item, index) => (
@@ -62,6 +61,7 @@ const Quiz: React.FC = () => {
                       {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
                   </button>
               </div>
+              <div className="flex w-60 h-20 ms-60 bg-blue-600 transition-opacity duration-700 ease-in opacity-50 hover:opacity-0"></div>
             </div>
           ) : (
             <>
