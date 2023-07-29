@@ -3,7 +3,7 @@ import { BrowserRouter,
   Routes,} from 'react-router-dom';
   
 import '../src/styles/App.css';
-import LandingPage from './pages/landingPage/LandingPage';
+import LandingPage from './pages/LandingPage/LandingPage';
 import QuizPage from './pages/quizPage/QuizPage';
 import AboutPage from './pages/aboutPage/AboutPage';
 
