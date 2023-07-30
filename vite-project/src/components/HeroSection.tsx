@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
       <div className="container mx-auto flex px-5 py-5 md:flex-row flex-col items-center">
           <div className="lg:flex-grow flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
               <h2 className="title-font tracking-wide sm:text-1xl md:text-4xl xl:text-5xl mb-5 font-bold ">Meet</h2>
-              <h1 className="bg-gradient-to-r from-gray-900 to-neutral-700 bg-clip-text text-transparent title-font tracking-wide sm:text-7xl md:text-8xl xl:text-9xl mb-4 font-extrabold pl-12">NutriAi</h1>
+              <h1 className="bg-gradient-to-r from-black to-neutral-700 bg-clip-text text-transparent title-font tracking-wide sm:text-7xl md:text-8xl xl:text-9xl mb-4 font-extrabold pl-12">NutriAi</h1>
               <p className="mx-8 leading-relaxed opacity-60">Embark on your fitness journey today! Unleash your inner potential with NutriAi; your own interactive 
                 Personal Trainer and nutrition companion.</p>
               <Link className="mx-8 -my-12" to="/quiz"> <StartButton /></Link>

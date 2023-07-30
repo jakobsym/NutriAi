@@ -5,11 +5,13 @@ body{
     justify-content: center;
     margin: 0;
     padding: 0 30px;
+    overflow: auto;
 }
 
 .quiz-container {
     max-width: 500px;
     min-width: 250px;
+    align-items: flex-start;
     /* background: #a3a3a3; */
     border-radius: 4px;
     margin-top: 100px;
@@ -50,9 +52,9 @@ body{
   }
   
   .quiz-container ul .selected-answer {
-    background: #4ade80;
+    background: #93c5fd;
     opacity: 75%;
-    border: 1px solid #15803d;
+    border: 1px solid #1e3a8a;
   }
   
   .quiz-container button {
@@ -92,4 +94,26 @@ body{
 .result p span {
   color: #800080;
   font-size: 22px;
+}
+
+#result-button{
+  background: linear-gradient(90.04deg, #030712 0.03%, #6b7280 99.96%);
+  border-radius: 9px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 10px 42px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+#result-container{
+  max-width: 500px;
+  min-width: 250px;
+  align-items: flex-start;
+    /* background: #a3a3a3; */
+  border-radius: 4px;
+  margin-top: 100px;
+  padding: 60px 90px;
 }

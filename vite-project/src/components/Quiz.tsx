@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import Result from './Result';
 import '../styles/Quiz.css';
-import { quiz } from '../pages/quizPage/quizData';
+import { quiz } from '../pages/quizPage/quizData.ts';
+import { useNavigate } from 'react-router-dom';
+//import ResultPage from '../pages/resultPage/ResultPage.tsx';
 
 const Quiz: React.FC = () => {
    
     const [activeQuestion, setActiveQuestion] = useState<number>(0);    // track curr. question to iterate over all questions
-    const [userChoice, setUserChoice] = useState<string[]>([])  // store user choices as a state
+    const [userChoice, setUserChoice] = useState<string[]>([]);  // store user choices as a state
     const [selectedAnswerIndex, setSelectedAnswerIndex] = useState<number | null>(null);    // highlight selected answer
     const [showResult, setShowResult] = useState<boolean>(false);
+    const navigate = useNavigate();
   
     const onClickNext = () => {
       setSelectedAnswerIndex(null);  // reset highlight
@@ -23,6 +26,7 @@ const Quiz: React.FC = () => {
       else {
         setActiveQuestion(0); // resets quiz, if user finishes
         setShowResult(true);  // display result component
+        navigate('/result');  // send user to /result page upon completion of quiz
       }
     }
     
@@ -36,7 +40,7 @@ const Quiz: React.FC = () => {
 
     return (
       
-        <div className='quiz-container max-w-500px min-w-250px rounded-md mt-100px p-30px 60px'>
+        <div className='quiz-container max-w-500px min-w-250px rounded-md mt-100px p-30px 60px mx-auto shadow-2xl border-1'>
           {!showResult ? (
               <div>
 
@@ -61,12 +65,12 @@ const Quiz: React.FC = () => {
                       {activeQuestion === questions.length - 1 ? 'Finish' : 'Next'}
                   </button>
               </div>
-              <div className="flex w-60 h-20 ms-60 bg-blue-600 transition-opacity duration-700 ease-in opacity-50 hover:opacity-0"></div>
             </div>
           ) : (
             <>
               {/* console.log("showResult = " + showResult)! */}
               <Result userChoice={userChoice} />
+              {/* navigate('/result') */}
             </>
           )}
         </div>
