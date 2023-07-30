@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import Result from './Result';
+import Logo from './Logo';
 import '../styles/Quiz.css';
 import { quiz } from '../pages/quizPage/quizData.ts';
-import { useNavigate } from 'react-router-dom';
-//import ResultPage from '../pages/resultPage/ResultPage.tsx';
+import { useNavigate, Link } from 'react-router-dom';
+
 
 const Quiz: React.FC = () => {
    
@@ -39,6 +40,10 @@ const Quiz: React.FC = () => {
     const {question, choices} = questions[activeQuestion];  // fetch corresponding 'choices[]' for the 'question'
 
     return (
+      <>
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <Link to="/"> <Logo /> </Link>
+        </div>
       
         <div className='quiz-container max-w-500px min-w-250px rounded-md mt-100px p-30px 60px mx-auto shadow-2xl border-1'>
           {!showResult ? (
@@ -74,7 +79,8 @@ const Quiz: React.FC = () => {
             </>
           )}
         </div>
-    )
+      </>
+    );
 }
 
 export default Quiz
