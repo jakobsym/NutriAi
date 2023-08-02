@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom"
-import Quiz from "../../components/Quiz"
+import { Route, Routes } from "react-router-dom";
+import Quiz from "../../components/Quiz";
 
 const QuizPage = () => {
   return (

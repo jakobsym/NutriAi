@@ -4,7 +4,9 @@ import { BrowserRouter,
   
 import '../src/styles/App.css';
 import LandingPage from './pages/LandingPage/LandingPage';
-import QuizPage from './pages/quiz_page/QuizPage';
+import QuizPage from './pages/quizPage/QuizPage';
+import AboutPage from './pages/aboutPage/AboutPage';
+import Result from './components/Result';
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/quiz/*" element={<QuizPage />} />
-        {/* <Route path="/result/*" element = {<ResultPage />} /> */}
+        <Route path="/about/*" element={<AboutPage />} />
+        <Route path="/result/*" element={<Result userChoice={[]} />} />
       </Routes>
     </BrowserRouter>
   );

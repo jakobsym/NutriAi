@@ -1,6 +1,7 @@
-import React from 'react'
-import Logo from './Logo'
-import AboutButton from './AboutButton'
+import React from 'react';
+import Logo from './Logo';
+import AboutButton from './AboutButton';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
@@ -14,9 +15,10 @@ const Header: React.FC = () => {
                 <a className='mr-5 text-black hover:text-gray-900 cursor-pointer "'></a>
                 <a className="mr-5 hover:text-gray-900 text-black cursor-pointer"></a>
             </nav>
-            <AboutButton />
+            <Link to="/about"> <AboutButton /></Link>
         </div>
     </header>
   )
 }
+
 export default Header;
