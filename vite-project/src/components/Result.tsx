@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import  generatePrompt from "../api/generate.js";
 import Logo from "./Logo.js";
+import Loading from "./Loading.js";
 import "../styles/Quiz.css";
 import { Link } from 'react-router-dom';
 
@@ -9,10 +10,11 @@ import { Link } from 'react-router-dom';
 const Result = (props: {userChoice: string[]}) => {
     const [result, setResult] = useState<String[]>(); // result from API Response
     const [dispModalResult, setDispModalResult] = useState<boolean>(false);   // Modal for displaying created result
+    const [isLoading, setLoading] = useState<boolean>(true); // true == loading, false == !loading
 
     const userInput :string = "Im a " + props.userChoice[0] + " that weighs about " + props.userChoice[1] + ". I want to " + 
         props.userChoice[2] + " doing " + props.userChoice[3] + ". Return a response using only 5 methods to achieve my goal, maybe listing specfic exercies. I want the response to have space between each bullet point.";
-        /* bullet points listed 1 through 5 creating blank space between each bullet point to help me acheive my goal:" ; */
+
 
     const handleClick = () => {
         setDispModalResult(true);
@@ -27,6 +29,7 @@ const Result = (props: {userChoice: string[]}) => {
 
     async function displayResult() {
         setResult(await generatePrompt(userInput));
+        setLoading(false);
     }
  
     return (
@@ -65,17 +68,20 @@ const Result = (props: {userChoice: string[]}) => {
                                 </span>
                             </button>
                         </div>
-
                         {/* Body */}
                         <div className="relative p-6 flex-auto">
-                            <ul className="my-4 text-slate-500 text-lg leading-relaxed">
-                                {result && result.map((point, index) => (
-                                    <p key={index} className="mb-2">
-                                        {console.log(point.trim())!}
-                                        {"\n" + point.trim()}
-                                    </p>
-                                ))}
-                            </ul>
+                            { isLoading ? (<Loading size={35}/>
+                            ) : (
+                                <ul className="my-4 text-slate-500 text-lg leading-relaxed">
+                                    {result && result.map((point, index) => (
+                                        <p key={index} className="mb-2">
+                                            {console.log(point.trim())!}
+                                            {"\n" + point.trim()}
+                                        </p>
+                                    ))}
+                                </ul>
+                            )}
+                            {/* if 'loading' == True, display loading bar, otherwise display output */}
                         </div>
 
                         {/* Footer */}
