@@ -11,7 +11,8 @@ const Result = (props: {userChoice: string[]}) => {
     const [dispModalResult, setDispModalResult] = useState<boolean>(false);   // Modal for displaying created result
 
     const userInput :string = "Im a " + props.userChoice[0] + " that weighs about " + props.userChoice[1] + ". I want to " + 
-        props.userChoice[2] + " doing " + props.userChoice[3] + ". Return a response using only 5 bullet points listed 1 through 5 creating blank space between each bullet point to help me acheive my goal:" ;
+        props.userChoice[2] + " doing " + props.userChoice[3] + ". Return a response using only 5 methods to achieve my goal, maybe listing specfic exercies. I want the response to have space between each bullet point.";
+        /* bullet points listed 1 through 5 creating blank space between each bullet point to help me acheive my goal:" ; */
 
     const handleClick = () => {
         setDispModalResult(true);
@@ -36,9 +37,11 @@ const Result = (props: {userChoice: string[]}) => {
         <div id="result-container"></div>
         
         {/* Modal display button */}
-        <button id="result-button" onClick={handleClick}>
-            Display results
-        </button>
+        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row-reverse items-end">
+            <button className="result-button"  onClick={handleClick}>
+                Display results
+            </button>
+        </div>
 
         {/* Modal display conditional */}
         {dispModalResult ? (
@@ -67,10 +70,10 @@ const Result = (props: {userChoice: string[]}) => {
                         <div className="relative p-6 flex-auto">
                             <ul className="my-4 text-slate-500 text-lg leading-relaxed">
                                 {result && result.map((point, index) => (
-                                    <li key={index} className="mb-2">
+                                    <p key={index} className="mb-2">
                                         {console.log(point.trim())!}
-                                        {point.trim()}
-                                    </li>
+                                        {"\n" + point.trim()}
+                                    </p>
                                 ))}
                             </ul>
                         </div>

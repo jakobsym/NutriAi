@@ -96,7 +96,7 @@ body{
   font-size: 22px;
 }
 
-#result-button{
+.result-button{
   background: linear-gradient(90.04deg, #030712 0.03%, #6b7280 99.96%);
   border-radius: 9px;
   font-size: 18px;
