@@ -3,6 +3,7 @@ import React from 'react'
 type LoadingProps = {
     size:number,
 }
+
 //TODO: Still need to center this loading module
 const Loading: React.FC<LoadingProps> = ({size}) => {
   return (

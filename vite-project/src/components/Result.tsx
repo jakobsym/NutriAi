@@ -40,7 +40,7 @@ const Result = (props: {userChoice: string[]}) => {
         <div id="result-container"></div>
         
         {/* Modal display button */}
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row-reverse items-end">
+        <div className="container mx-auto flex flex-wrap h-5 flex-col md:flex-row-reverse items-end">
             <button className="result-button"  onClick={handleClick}>
                 Display results
             </button>

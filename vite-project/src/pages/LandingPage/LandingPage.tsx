@@ -8,7 +8,9 @@ const LandingPage = () => {
         <Header />
         <HeroSection />
         <div className="h-[50px] bg-[#000000] opacity-90 fixed bottom-0 left-0 z-20 w-full flex flex-row items-center justify-evenly">
-          <p className="text-white/80 text-base md:text-lg font-semibold md:leading-[60px] whitespace-nowrap flex flex-row">Footer section TBA</p>
+          <p className="text-white/80 text-base md:text-xs font-semibold md:leading-[60px] whitespace-nowrap flex flex-row">
+            Powered&nbsp; by &nbsp;<p> <a href="https://openai.com/"> OpenAi.</a>  </p>
+          </p>
         </div>
     </>
   )
